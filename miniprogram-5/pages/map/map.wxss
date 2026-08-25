@@ -1,0 +1,299 @@
+/* pages/map/map.wxss */
+
+.container {  
+
+  position: relative;  
+  /* height: 100vh;   */
+  height: 100vh;
+  width: 100vw;  
+  overflow: hidden; 
+} 
+
+.map {  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+}
+
+.map-fab{
+  position: absolute;
+  right: 24rpx;
+  bottom: 220rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background: #1a6cff;
+  box-shadow: 0 16rpx 40rpx rgba(26, 108, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-fab-text{
+  color: #ffffff;
+  font-size: 30rpx;
+  line-height: 1;
+}
+  
+.draggable-container {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.draggable-container.no-transition {
+  transition: none !important;
+}
+
+.drag-handle {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scroll-wrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.drag-indicator{
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 20px;
+}
+/* ----------------------------- */
+.level{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.suggest-box{
+	margin: 0 20rpx 10rpx 20rpx;
+	background: #ffffff;
+	border-radius: 20rpx;
+	overflow: hidden;
+	box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.06);
+}
+
+.suggest-item{
+	padding: 18rpx 22rpx;
+	border-bottom: 1rpx solid #f0f0f0;
+}
+
+.suggest-item:last-child{
+	border-bottom: 0;
+}
+
+.suggest-title{
+	font-size: 28rpx;
+	font-weight: 700;
+	color: #222;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.suggest-sub{
+	margin-top: 6rpx;
+	font-size: 24rpx;
+	color: #9aa0a6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 二级菜单 */
+.tab-box {
+	margin: 3% 2%;
+	padding: 20px;
+	background-color: white;
+	border-radius: 20rpx;
+	height: 150px;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
+.tab-list {	
+	width: 22%;
+	margin-bottom: 5px;
+	padding: 20rpx,0;
+	/* flex: 1; */
+	align-items: center;
+	text-align: center;
+	color: black;
+}
+
+.tab-img{
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.tab-text {
+	display: block;
+	font-size: 25rpx;
+	margin: 5rpx 0;
+	color: #636262;
+}
+
+/* 特征 */
+.ch-box{
+	margin: 20px, 20px;
+	padding: 20px;
+	border-radius: 20rpx;
+	background-color: white;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+	font-size: 25rpx;
+	flex:1;
+}
+
+.row1{
+	display: flex;
+	width: 50%;
+}
+
+.dest-box{
+  margin-left: 12rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  min-width: 0;
+}
+
+.dest-name{
+  font-size: 26rpx;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260rpx;
+}
+
+.dest-route{
+  font-size: 22rpx;
+  color: #9aa0a6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260rpx;
+}
+
+.text{
+	margin-left: 15rpx;
+    color: #636262;
+}
+
+.icon-small{
+    width: 40rpx;
+    height: 40rpx;
+  }
+
+/*个性推荐  */
+.rec-box{
+	margin: 20rpx;
+	display: grid;
+	align-items: center;
+}
+
+.line{
+	width: 10rpx;
+	height: 34rpx;
+	border-radius: 50rpx;
+	background-color: #7dc5eb;
+  }
+  
+.title {
+	  margin-left: 15rpx;
+	  font-size: 35rpx;
+	  font-weight: bold;
+  }
+
+.rec{
+	margin: 20rpx 10rpx;
+	padding: 20rpx;
+	border-radius: 20rpx;
+	width: 89%;
+	height: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 20rpx;
+}
+.text1{
+	text-align: center;
+}
+
+.rec-item{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 18rpx;
+	padding: 18rpx;
+	border-radius: 18rpx;
+	background-color: #ffffff;
+	box-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.06);
+}
+
+.rec-img{
+	width: 96rpx;
+	height: 96rpx;
+	border-radius: 16rpx;
+	background-color: #f4f6f8;
+	flex-shrink: 0;
+}
+
+.rec-info{
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8rpx;
+}
+
+.rec-name{
+	font-size: 30rpx;
+	font-weight: 700;
+	color: #222;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.rec-reason{
+	font-size: 24rpx;
+	color: #9aa0a6;
+	line-height: 1.35;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.sheet-scroll{
+  flex: 1;
+}

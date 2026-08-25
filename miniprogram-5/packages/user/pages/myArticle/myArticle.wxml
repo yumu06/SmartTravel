@@ -1,0 +1,21 @@
+<!--packages/user/pages/myArticle/myArticle.wxml我的文章-->
+<view class="page">
+    <view wx:if="{{!myArticles.length}}" class="empty">
+        <image class="empty-icon" src="../../../../icon/旅游攻略.png" mode="aspectFit" />
+        <text class="empty-title">暂无文章</text>
+        <text class="empty-sub">点击右下角按钮去发布一篇吧</text>
+    </view>
+
+    <view class="list" wx:else>
+        <block wx:for="{{myArticles}}" wx:key="ID">
+            <view class="card" bindtap="toDetail" data-id="{{item.ID}}">
+                <view class="card-title">{{item.Title}}</view>
+                <view class="card-desc">{{item.Snippet}}</view>
+                <view class="card-meta">
+                    <text class="meta-text">{{item.CreatedAt}}</text>
+                    <text class="meta-arrow">›</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

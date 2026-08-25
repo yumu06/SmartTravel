@@ -1,0 +1,18 @@
+# Local secrets
+travel/config/environment.local.ps1
+.env
+.env.local
+
+# Benchmark runtime artifacts
+travel/benchmark/*.exe
+travel/benchmark/*.log
+travel/benchmark/post_urls.txt
+
+# Go build output
+travel/travel.exe
+
+# WeChat Developer Tools private settings
+miniprogram-5/project.private.config.json
+
+# IDE metadata may contain local usernames and absolute paths
+.idea/

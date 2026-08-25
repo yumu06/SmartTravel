@@ -1,0 +1,114 @@
+/* pages/user/user.wxss */
+page{
+  background-color: #f5f7fb;
+}
+
+.page{
+  min-height: 100%;
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #07c160;
+  color: white;
+  border-radius: 5px;
+}
+
+/*头像资料*/
+.top-bg{
+  background-image: linear-gradient(to bottom, #9dc2de, #b2c8da
+	,#f5f7fb);
+    height: 260rpx;
+    padding: 24rpx;
+    display: flex;
+}
+
+.row-left{
+    width: 22%;
+    padding: 42rpx 24rpx;
+    align-items: center;
+}
+
+.row-img{
+    width: 140rpx;
+    height: 140rpx;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4rpx solid rgba(255, 255, 255, 0.85);
+}
+
+.row-right{
+    padding: 50rpx 0;
+    width: 78%;
+    line-height: 44rpx;
+    color: snow;
+}
+
+.nName{
+    width: 100%;
+    font-size: 40rpx;
+    line-height: 46rpx;
+    color: snow;
+    font-weight: 700;
+}
+
+.content{
+    margin-top: 14rpx;
+    width: 100%;
+    font-size: 28rpx;
+    line-height: 42rpx;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/*第二部分*/
+.menu-card{
+  width: 92%;
+  margin: 20rpx auto 0;
+  border-radius: 22rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 30rpx rgba(16, 24, 40, 0.06);
+  background-color: #ffffff;
+}
+.row {
+    display: flex;
+    align-items: center;
+    padding: 28rpx 22rpx;
+    font-size: 30rpx;
+    font-weight: inherit;
+    background-color: #ffffff;
+    border-bottom: 1rpx solid #edf2f7;
+  }
+
+.row-last{
+  border-bottom: none;
+}
+
+.text {
+    margin-left: 15rpx;
+    color: #374151;
+  }
+
+.left {
+    margin: 0 0 0 12rpx;
+    width: 90%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  
+.right {
+    width: 10%;
+    text-align: right;
+    color: gray;
+  }
+
+.icon-small{
+    width: 40rpx;
+    height: 40rpx;
+  }

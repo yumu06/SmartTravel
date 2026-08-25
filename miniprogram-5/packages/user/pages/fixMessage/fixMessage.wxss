@@ -1,0 +1,84 @@
+/* pages/user/fixMessage/fixMessage.wxss */
+page{
+  background-color: #f5f7fb;
+}
+
+.page{
+  min-height: 100%;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.card{
+  background-color: #ffffff;
+  border-radius: 22rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 30rpx rgba(16, 24, 40, 0.06);
+}
+.row {
+    display: flex;
+    align-items: center;
+    padding: 30rpx 20rpx;
+    font-size: 30rpx;
+    font-weight: inherit;
+    background-color: #ffffff;
+    border-bottom: 1rpx solid #edf2f7;
+  }
+
+.row-last{
+  border-bottom: none;
+}
+
+.text {
+    /* margin-left: 15rpx; */
+    color: #636262;
+  }
+
+.img{
+    width: 72rpx;
+    height: 72rpx;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #eef1f6;
+}
+
+.left {
+    margin: 0 0 0 20rpx;
+    width: 28%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  
+.right {
+    width: 72%;
+    margin: 0 40rpx 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    color: rgb(148, 147, 147);
+  }
+
+.input{
+  width: 100%;
+  text-align: right;
+  font-size: 28rpx;
+  color: #111827;
+}
+
+.icon-small{
+    width: 40rpx;
+    height: 40rpx;
+  }
+
+.submit-btn {
+    width: 100%;
+    margin-top: 22rpx;
+    background-color: #9dc6de;
+    color: #ffffff;
+    border-radius: 18rpx;
+    padding: 22rpx 0;
+    text-align: center;
+    font-size: 30rpx;
+  } 

@@ -1,0 +1,74 @@
+/* packages/user/pages/myArticle/myDetail/myDetail.wxss */
+.article-detail {
+    padding: 20rpx;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+  }
+  
+  .avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+  }
+  
+  .author-name {
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+  
+  .publish-time {
+    font-size: 24rpx;
+    color: #888;
+    margin-left: 10rpx;
+  }
+  
+  .collect-button {
+    background-color: white;
+    width: 20%;
+    position: absolute;
+    top: 0rpx;
+    right: -50rpx;
+  }
+  
+  .collect-icon {
+    width: 60rpx;
+    height: 60rpx;
+  }
+  
+  .title {
+    padding: 20rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    margin-top: 20rpx;
+    margin-bottom: 0rpx;
+  }
+  
+  .content {
+    font-size: 32rpx;
+    line-height: 1.5;
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+    word-wrap: break-word; /* 强制长单词或URL地址换行到下一行 */
+    white-space: normal; /* 默认值，允许内容换行 */
+    overflow-wrap: break-word; /* 与word-wrap相同的作用，提供更好的浏览器兼容性 */
+    max-width: 100%; /* 确保内容区不超过其父容器的宽度 */
+  }
+  
+
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rpx;
+  }
+  
+  .gallery-imagepp {
+    width: calc(33.33% - 7.5rpx);
+    height: 250rpx;
+    border-radius: 10rpx;
+  }

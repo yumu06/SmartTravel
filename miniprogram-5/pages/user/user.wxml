@@ -1,0 +1,69 @@
+<!--pages/user/user.wxml-->
+<view wx:if="{{!isLoggedIn}}">
+  <view class="login-container">
+    <view class="login-title">请登录</view>
+    <button bindtap="handleLogin" class="login-button">登录</button>
+  </view>
+</view>
+
+<!-- 已登录，显示个人中心 -->
+<view class="page" wx:else>
+  <!--头像-->
+  <view class="top-bg" bind:tap="onTap">
+    <view class="row-left">
+        <image src="{{userInfo.avatar}}" class="row-img" mode="aspectFill"></image>
+    </view>
+    <view class="row-right">
+        <view class="nName">{{userInfo.nickname}}</view>
+        <view class="content">{{userInfo.motto}}</view>
+    </view>
+  </view>
+  <!--列表-->
+  <view class="menu-card">
+    <navigator class="row" url="../../packages/user/pages/fixMessage/fixMessage">
+      <view class="left">
+        <image src="../../icon/帐户.png" class="icon-small" mode="aspectFill"/>
+        <text class="text">个人资料</text>
+      </view>
+      <view class="right">
+        <image src="../../icon/right.png" class="icon-small" mode="aspectFill"/>
+      </view>
+    </navigator>
+    <navigator class="row" url="../../packages/user/pages/favoriteList/favoriteList?type=post">
+      <view class="left">
+        <image src="../../icon/爱心.png" class="icon-small" mode="aspectFill"/>
+        <text class="text">收藏</text>
+      </view>
+      <view class="right">
+        <image src="../../icon/right.png" class="icon-small" mode="aspectFill"/>
+      </view>
+    </navigator>
+    <navigator class="row" url="../../packages/user/pages/myArticle/myArticle">
+      <view class="left">
+        <image src="../../icon/编辑撰写.png" class="icon-small" mode="aspectFill"/>
+        <text class="text">我的文章</text>
+      </view>
+      <view class="right">
+        <image src="../../icon/right.png" class="icon-small" mode="aspectFill"/>
+      </view>
+    </navigator>    
+    <navigator class="row" url="../../packages/user/pages/favoriteList/favoriteList?type=history">
+      <view class="left">
+        <image src="../../icon/地球仪.png" class="icon-small" mode="aspectFill"/>
+        <text class="text">个人足迹</text>
+      </view>
+      <view class="right">
+        <image src="../../icon/right.png" class="icon-small" mode="aspectFill"/>
+      </view>
+    </navigator>
+    <view class="row row-last" bindtap="logout">
+      <view class="left">
+        <image src="../../icon/锁.png" class="icon-small" mode="aspectFill"/>
+        <text class="text">退出登录</text>
+      </view>
+      <view class="right">
+        <image src="../../icon/right.png" class="icon-small" mode="aspectFill"/>
+      </view>
+    </view>
+  </view>
+</view>

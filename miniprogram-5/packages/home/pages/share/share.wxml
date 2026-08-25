@@ -1,0 +1,16 @@
+<!--packages/home/pages/share/share.wxml旅游分享页面（文章列表）-->
+<view class="page">
+  <view class="list">
+    <view class="post" wx:for="{{posts}}" wx:key="ID" bindtap="toDetail" data-id="{{item.ID}}">
+      <image class="post-image" src="{{item.coverUrl || '../../../../icon/旅游攻略.png'}}" mode="aspectFill"></image>
+      <view class="post-content">
+        <view class="post-snippet">{{item.snippet}}</view>
+        <view class="post-meta">
+          <image class="post-avatar" src="https://img0.baidu.com/it/u=3204281136,1911957924&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" mode="aspectFill"></image>
+          <text class="post-nickname">作者 {{item.UserID}}</text>
+          <text class="post-time">{{item.CreatedAt}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

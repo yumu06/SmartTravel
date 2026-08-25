@@ -1,0 +1,65 @@
+<!--packages/user/pages/favoriteList/favoriteList.wxml收藏页面-->
+<view class="page">
+  <view class="header">
+    <view class="segmented" wx:if="{{tabs.length > 1}}">
+      <view class="seg-item {{type === item.key ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" data-type="{{item.key}}" bindtap="onTabTap">
+        <text class="seg-text">{{item.label}}</text>
+      </view>
+    </view>
+    <view class="segmented single" wx:else>
+      <view class="seg-item active">
+        <text class="seg-text">{{tabs[0].label}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list" wx:if="{{type === 'post'}}">
+    <view wx:if="{{!favoriteArticles.length}}" class="empty">
+      <image class="empty-icon" src="../../../../icon/爱心.png" mode="aspectFit" />
+      <text class="empty-title">暂无收藏文章</text>
+      <text class="empty-sub">去首页看看推荐内容</text>
+    </view>
+    <block wx:for="{{favoriteArticles}}" wx:key="ID">
+      <view class="card" bindtap="toDetail" data-id="{{item.ID}}">
+        <view class="card-body">
+          <view class="card-title">{{item.Title}}</view>
+          <view class="card-desc">{{item.Snippet}}</view>
+        </view>
+        <view class="card-meta">
+          <text class="meta-text">作者 {{item.UserID}}</text>
+          <text class="meta-dot">·</text>
+          <text class="meta-text">{{item.CreatedAt}}</text>
+          <text class="meta-arrow">›</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="list" wx:else>
+    <view wx:if="{{!foots.length}}" class="empty">
+      <image class="empty-icon" src="../../../../icon/地球仪.png" mode="aspectFit" />
+      <text class="empty-title">暂无足迹</text>
+      <text class="empty-sub">在地图页规划路线并保存</text>
+    </view>
+    <block wx:for="{{foots}}" wx:key="ID">
+      <view class="card" bindtap="toFootDetail" data-index="{{index}}">
+        <view class="route-top">
+          <view class="route-title">{{item.Title || '足迹'}}</view>
+          <view class="badge">{{item.Mode}}</view>
+        </view>
+        <view class="route-line">
+          <view class="dot start"></view>
+          <text class="route-text">{{item.OriginDisplay}}</text>
+        </view>
+        <view class="route-line">
+          <view class="dot end"></view>
+          <text class="route-text">{{item.DestinationDisplay}}</text>
+        </view>
+        <view class="card-meta">
+          <text class="meta-text">{{item.CreatedAt}}</text>
+          <text class="meta-arrow">›</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

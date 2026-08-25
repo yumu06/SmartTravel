@@ -1,0 +1,26 @@
+<!--pages/article/article.wxml-->
+<view class="form-container">
+    
+    <view class="form-group">
+        <input name="title" placeholder="请输入标题" style="height: fit-content;" class="form-control" bindinput="bindTitleInput"/>
+    </view>
+    <view class="form-group">
+        <textarea name="content" placeholder="请输入内容" class="form-control" bindinput="bindContentInput"></textarea>
+    </view>
+    <!-- <view class="form-group">
+        <view class="upload-label" bindtap="chooseImage">
+            上传图片 
+        </view>
+    </view> -->
+    <!-- 显示已选图片 -->
+    <!-- <view class='imgList'>
+        <view class='imgBox' wx:for="{{headImg}}" wx:key="{{item}}">
+            <image data-img='{{item}}' catchtap='previewImg' src="{{item}}"/>
+            <icon type="clear" size="20" color="grey" catchtap='removeImage' data-img='{{item}}'/>
+        </view>
+    </view> -->
+
+    <view class="form-group">
+        <button bind:tap="submitPost" class="btn btn-primary">立即发布</button>
+    </view>
+</view>

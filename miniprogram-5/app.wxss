@@ -1,0 +1,87 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+page{
+  background: #f7f8fa;
+}
+
+.am-page{
+  min-height: 100vh;
+  background: #f7f8fa;
+}
+
+.am-search-wrap{
+  width: 100%;
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+}
+
+.am-search-bar{
+  width: 100%;
+  height: 76rpx;
+  background: #ffffff;
+  border-radius: 999rpx;
+  padding: 0 22rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14rpx;
+  box-shadow: 0 10rpx 30rpx rgba(16, 24, 40, 0.06);
+}
+
+.am-search-icon{
+  width: 32rpx;
+  height: 32rpx;
+  flex-shrink: 0;
+}
+
+.am-search-filter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rpx;
+  flex-shrink: 0;
+}
+
+.am-search-filter-text{
+  font-size: 30rpx;
+  color: #111111;
+  line-height: 1;
+}
+
+.am-search-filter-caret{
+  font-size: 24rpx;
+  color: #9aa0a6;
+  line-height: 1;
+}
+
+.am-search-divider{
+  width: 2rpx;
+  height: 32rpx;
+  background: #eef0f3;
+  flex-shrink: 0;
+}
+
+.am-search-input{
+  flex: 1;
+  font-size: 30rpx;
+  color: #111111;
+  line-height: 1;
+}
+
+.am-search-action{
+  font-size: 30rpx;
+  color: #1a6cff;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-left: 8rpx;
+}

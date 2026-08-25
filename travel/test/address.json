@@ -1,0 +1,56 @@
+[
+  {
+    "name": "中山公园",
+    "address": "汕头市龙湖区中山路",
+    "lat": 23.370415,
+    "lng": 116.716627,
+    "tag": "治愈感",
+    "summary": "绿树成荫的老牌公园，有湖有桥，适合安静散步和发呆",
+    "image_url": "https://img-qn.51miz.com/preview/photo/00/01/90/07/P-1900725-D1772AC5.jpg"
+  },
+  {
+    "name": "妈屿岛",
+    "address": "汕头市龙湖区外马路妈屿岛",
+    "lat": 23.356073,
+    "lng": 116.741581,
+    "tag": "治愈感",
+    "summary": "小众海岛，岛上民风淳朴，海边吹风、看海特别舒服",
+    "image_url": "https://pic.616pic.com/ys_b_img/00/04/03/2J7OZtcGLZ.jpg"
+  },
+  {
+    "name": "汕头大学图书馆",
+    "address": "汕头市金平区大学路243号",
+    "lat": 23.434445,
+    "lng": 116.714121,
+    "tag": "治愈感",
+    "summary": "安静现代的图书馆，阳光透进来很舒服，是心灵慢下来的一角",
+    "image_url": "https://cdnfile.66law.cn/img2022/202211/071359572818.jpg"
+  },
+  {
+    "name": "东海岸绿道",
+    "address": "汕头市龙湖区东海岸新城",
+    "lat": 23.363091,
+    "lng": 116.779004,
+    "tag": "治愈感",
+    "summary": "海风和绿植环绕的慢行道，骑车或散步都能让心情放松",
+    "image_url": "https://youimg1.c-ctrip.com/target/10030y000000n3yjvBF92.jpg"
+  },
+  {
+    "name": "小公园开埠区",
+    "address": "汕头市金平区升平路",
+    "lat": 23.354299,
+    "lng": 116.682254,
+    "tag": "治愈感",
+    "summary": "中西合璧的骑楼街区，走在历史里，心情静下来",
+    "image_url": "https://img95.699pic.com/photo/50043/2362.jpg_wh300.jpg"
+  },
+  {
+    "name": "南澳青澳湾",
+    "address": "汕头市南澳县青澳镇",
+    "lat": 23.457084,
+    "lng": 117.041143,
+    "tag": "治愈感",
+    "summary": "海水清澈、沙滩细软，是汕头最清净的看海胜地之一",
+    "image_url": "https://youimg1.c-ctrip.com/target/100a13000000t3x6g8360.jpg"
+  }
+]

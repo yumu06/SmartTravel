@@ -1,0 +1,102 @@
+<!--pages/map/map.wxml-->
+<!--地图容器-->
+<view class="container">  
+  <map  
+    class="map"
+    id="map"  
+    longitude="{{longitude}}"  
+    latitude="{{latitude}}"  
+    scale="16"  
+    markers="{{markers}}"  
+    polyline="{{polyline}}"
+    include-points="{{includePoints}}"
+    show-location   
+  >  
+  </map>  
+  <cover-view class="map-fab" wx:if="{{showSaveButton}}" bindtap="onSaveFootTap">
+    <cover-view class="map-fab-text">保存</cover-view>
+  </cover-view>
+  <view class="draggable-container {{isDragging ? 'no-transition' : ''}}" style="top: {{dragPosition}}px">
+    <view class="drag-handle" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <view class="drag-indicator"></view>
+    </view>
+    <view class="scroll-wrapper" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <scroll-view class="sheet-scroll" scroll-y="{{isFull}}" style="height: {{scrollHeight}}px" bindscroll="onScroll" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" scroll-with-animation="true">
+        <!--搜索-->
+        <view class="am-search-wrap">
+          <view class="am-search-bar">
+            <icon class="am-search-icon" type="search" size="16"></icon>
+            <input placeholder="搜索目的地" class="am-search-input" value="{{searchKeyword}}" bindinput="onSearchInput" bindconfirm="onSearchConfirm" confirm-type="search" />
+            <text class="am-search-action" bindtap="onSearchConfirm">搜索</text>
+          </view>
+        </view>
+        <view wx:if="{{searchSuggestList.length}}" class="suggest-box">
+          <view class="suggest-item" wx:for="{{searchSuggestList}}" wx:key="id" data-index="{{index}}" bindtap="onTapSuggest">
+            <view class="suggest-title">{{item.title}}</view>
+            <view class="suggest-sub">{{item.address}}</view>
+          </view>
+        </view>
+        <!-- 菜单 -->
+        <view class="level tab-box">
+            <block class="col">
+                <navigator wx:for="{{tabList}}" wx:key="id" url="{{item.url}}?id={{item.id}}&title={{item.title}}" class="tab-list">
+                  <image class="tab-img" src="{{item.src}}" mode="widthFix"></image>
+                  <text class="tab-text">{{item.title}}</text>
+                </navigator>
+            </block>
+        </view>
+        <!-- 特征 -->
+        <view class="level ch-box">
+          <view class="row">
+            <view class="row1">
+              <image class="icon-small" src="../../icon/086_表情.png" mode="aspectFill"/>
+              <text class="text">心情指数</text>
+              <picker mode="selector" range="{{moodOptions}}" value="{{moodIndex}}" bindchange="onMoodChange">
+                <text class="text">{{selectedMood}}</text>
+              </picker>
+            </view>
+            <view class="row1">
+              <image class="icon-small" src="../../icon/086_定位.png" mode="aspectFill"/>
+              <text class="text">目的地</text>
+              <view class="dest-box">
+                <text class="dest-name">{{currentDestination ? currentDestination.name : ''}}</text>
+                <text class="dest-route" wx:if="{{routeInfoText}}">{{routeInfoText}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 推荐 -->
+        <view class="rec-box">
+          <view class="level">
+            <view class="line"></view>
+            <view class="title">个性推荐</view>
+          </view>
+          <view class="rec">
+            <view wx:if="{{isRecommendLoading}}" class="rec-item">
+              <view class="rec-info">
+                <view class="rec-name">加载中...</view>
+                <view class="rec-reason"></view>
+              </view>
+            </view>
+            <view wx:elif="{{recommendError}}" class="rec-item">
+              <view class="rec-info">
+                <view class="rec-name">获取推荐失败</view>
+                <view class="rec-reason">{{recommendError}}</view>
+              </view>
+            </view>
+            <block wx:else>
+              <view class="rec-item" wx:for="{{recommendPlaces}}" wx:for-index="index" wx:key="name" data-index="{{index}}" bindtap="onTapRecommend">
+                <image class="rec-img" src="{{item.image}}" mode="aspectFill"></image>
+                <view class="rec-info">
+                  <view class="rec-name">{{item.name}}</view>
+                  <view class="rec-reason">{{item.reason}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+    </scroll-view>
+    </view>
+  </view>
+
+</view>

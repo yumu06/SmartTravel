@@ -1,0 +1,53 @@
+server:
+  port: 1016
+  access_log: true
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  root: root
+  # 通过 MYSQL_PASSWORD 环境变量注入
+  password: ""
+  database: travel_database
+  loc: Asia/Shanghai
+  max_open_conns: 50
+  max_idle_conns: 10
+  conn_max_lifetime: 30m
+  conn_max_idle_time: 10m
+  slow_threshold: 200ms
+
+redis:
+  addr: 127.0.0.1:6379
+  # 通过 REDIS_PASSWORD 环境变量注入
+  password: ""
+  db: 0
+  pool_size: 50
+  min_idle_conns: 10
+  dial_timeout: 2s
+  read_timeout: 500ms
+  write_timeout: 500ms
+
+jwt:
+  # 必须通过 JWT_ACCESS_SECRET/JWT_REFRESH_SECRET 环境变量注入
+  access_secret: ""
+  refresh_secret: ""
+  access_ttl: 15m
+  refresh_ttl: 168h
+  issuer: ongoing-trip
+
+tencent:
+  # 通过 TENCENT_WEBSERVICE_API 环境变量注入
+  webservice_api: ""
+
+wx:
+  # 必填：通过 WX_APPID 环境变量注入微信小程序 AppID
+  appID: ""
+  # 通过 WX_APPSECRET 环境变量注入
+  appSecret: ""
+
+baidu:
+  ak: ""
+  region: 
+
+admin:
+  # 通过 ADMIN_TOKEN 环境变量注入
+  token: ""

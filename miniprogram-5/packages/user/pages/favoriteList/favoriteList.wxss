@@ -1,0 +1,178 @@
+page {
+  background: #ffffff;
+}
+
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 24rpx;
+}
+
+.segmented {
+  display: flex;
+  background: #f4f5f7;
+  padding: 8rpx;
+  border-radius: 16rpx;
+}
+
+.segmented.single {
+  justify-content: center;
+}
+
+.seg-item {
+  flex: 1;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14rpx;
+}
+
+.seg-item.active {
+  background: #ffffff;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.06);
+}
+
+.seg-text {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.seg-item.active .seg-text {
+  color: #111111;
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.06);
+}
+
+.card-body {
+  margin-bottom: 16rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #111111;
+  line-height: 44rpx;
+}
+
+.card-desc {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 38rpx;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.meta-text {
+  font-size: 24rpx;
+  color: #9aa0a6;
+}
+
+.meta-dot {
+  font-size: 24rpx;
+  color: #c6cacc;
+}
+
+.meta-arrow {
+  margin-left: auto;
+  font-size: 36rpx;
+  color: #c6cacc;
+}
+
+.empty {
+  padding: 120rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon {
+  width: 120rpx;
+  height: 120rpx;
+  opacity: 0.7;
+}
+
+.empty-title {
+  margin-top: 22rpx;
+  font-size: 30rpx;
+  color: #111111;
+  font-weight: 600;
+}
+
+.empty-sub {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #9aa0a6;
+}
+
+.route-top {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.route-title {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #111111;
+}
+
+.badge {
+  padding: 8rpx 14rpx;
+  background: #eef2ff;
+  color: #3b82f6;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+}
+
+.route-line {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  margin-top: 10rpx;
+}
+
+.dot {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 9rpx;
+}
+
+.dot.start {
+  background: #22c55e;
+}
+
+.dot.end {
+  background: #ef4444;
+}
+
+.route-text {
+  font-size: 26rpx;
+  color: #444444;
+  line-height: 36rpx;
+}

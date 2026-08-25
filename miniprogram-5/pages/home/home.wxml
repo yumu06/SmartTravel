@@ -1,0 +1,90 @@
+<!--首页home.wxml-->
+<view class="level bg-box">
+
+	<!--搜索-->
+	<view class="am-search-wrap">
+		<view class="am-search-bar">
+			<icon class="am-search-icon" type="search" size="16"></icon>
+			<picker mode="selector" range="{{searchTypes}}" value="{{searchTypeIndex}}" bindchange="onSearchTypeChange">
+				<view class="am-search-filter">
+					<text class="am-search-filter-text">{{searchTypes[searchTypeIndex]}}</text>
+					<text class="am-search-filter-caret">▾</text>
+				</view>
+			</picker>
+			<view class="am-search-divider"></view>
+			<input placeholder="输入关键字" class="am-search-input" value="{{keyword}}" confirm-type="search" bindinput="onKeywordInput" bindconfirm="doSearch" />
+			<text class="am-search-action" bindtap="doSearch">搜索</text>
+    </view>
+  </view>
+
+ <!--轮播图-->
+  <swiper>
+    <swiper-item>
+      <view class="item">
+        <image src="https://tse1-mm.cn.bing.net/th/id/OIP-C.iwiM6mKmcmYoMaQSarkt3AHaDt?rs=1&pid=ImgDetMain" mode="aspectFill"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="item">
+        <image src="https://photo-static-api.fotomore.com/creative/vcg/veer/612/veer-302781152.jpg" mode="aspectFill"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="item">
+        <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.vJL3lt6xBU6H9GedCxaz3AHaDt?rs=1&pid=ImgDetMain"  mode="aspectFill"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!--公告栏-->
+  <view class="tip-box level" bindtap="onTapNotice">
+    <view class="tip-title">公告</view>
+    <view class="tip-info">{{notices.length ? notices[0].Title : '欢迎使用随心游小程序~'}}</view>
+  </view>
+
+</view>
+  
+<!--二级菜单-->
+<!--
+<view class="level tab-box">
+        <block wx:for="{{tabList}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+            <navigator url="{{item.url}}" class="tab-list">
+              <image class="tab-img" src="{{item.src}}" mode="widthSFill"></image>
+              <text class="tab-text">{{item.title}}</text>
+            </navigator>
+        </block>
+</view>
+-->
+<view class="level tab-box">
+        <block >
+            <block wx:for="{{tabList}}" wx:key="id">
+              <navigator wx:if="{{item.url}}" url="{{item.url}}" class="tab-list">
+                <image class="tab-img" src="{{item.src}}" mode="widthFix"></image>
+                <text class="tab-text">{{item.title}}</text>
+              </navigator>
+              <view wx:else class="tab-list" data-id="{{item.id}}" bindtap="onTapTab">
+                <image class="tab-img" src="{{item.src}}" mode="widthFix"></image>
+                <text class="tab-text">{{item.title}}</text>
+              </view>
+            </block>
+        </block>
+</view>
+<!--推荐卡片-->
+<view class=" rec-box">
+  <view class="level">
+    <view class="line"></view>
+    <view class="title">文章推荐</view>
+  </view>
+  <view class="article-list" wx:for="{{recommendPosts}}" wx:key="ID" bindtap="toPostDetail" data-id="{{item.ID}}">
+		<view class="row-right">
+			<image src="{{item.HeadImg || '../../icon/旅游攻略.png'}}" class="row-img" mode="aspectFill"></image>
+		</view>
+		<view class="row-left">
+			<view class="row-left-title">{{item.Title}}</view>
+			<view class="row-left-content">{{item.Content}}</view>
+		</view>     
+	</view>
+</view>
+<!--编写按钮-->
+<navigator class="btn" url="../article/article" >
+  <image src="../../icon/Pencil.png" mode="aspectFill" class="btn-img"/>
+</navigator>

@@ -1,0 +1,23 @@
+<!--packages/user/pages/myArticle/myDetail/editArcitle/editArticle.wxml-->
+<view class="article-detail" wx:if="{{article}}">
+  <view class="header">
+    <image src="https://img0.baidu.com/it/u=3204281136,1911957924&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" mode="aspectFill" class="avatar"></image>
+    <view style="display: grid;">
+        <text class="author-name">我</text>
+        <text class="publish-time">{{article.UpdatedAt}}</text>
+    </view>
+    <view bindtap="saveArticle" class="collect-button">
+      <text style="color: #a1c8df;font-size: 30rpx;font-weight: bolder;">
+        <text>保存</text>
+      </text>
+    </view>
+  </view>
+
+  <view class="title">
+    <textarea value="{{article.Title}}" bindinput="onTitleInput"></textarea>
+  </view>
+
+  <view class="content">
+    <textarea maxlength="450" value="{{article.Content}}" bindinput="onContentInput" style="width: 370px;height: 250px;"></textarea>
+  </view>
+</view>

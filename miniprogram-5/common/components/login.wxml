@@ -1,0 +1,5 @@
+<!--common/components/login.wxml-->
+<view class="login-container">
+  <view class="login-title">请登录</view>
+  <button bindtap="handleLogin" class="login-button">登录</button>
+</view>

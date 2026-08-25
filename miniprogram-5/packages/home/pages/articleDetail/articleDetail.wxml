@@ -1,0 +1,43 @@
+<!--packages/home/pages/articleDetail/articleDetail.wxml-->
+<view class="article-detail" wx:if="{{article}}">
+  <view class="header">
+    <image src="https://img0.baidu.com/it/u=3204281136,1911957924&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" mode="aspectFill" class="avatar"></image>
+    <view style="display: grid;">
+      <text class="author-name" data-userid="{{article.UserID}}" bindtap="toAuthorPosts">作者 {{article.UserID}}</text>
+      <text class="publish-time">{{article.CreatedAt}}</text>
+    </view>
+    <button bindtap="toggleCollect" class="collect-button">
+      <image src="{{isCollected ? '../../../../icon/star-fill.png' : '../../../../icon/star.png'}}" mode="contain" class="collect-icon"></image>
+    </button>
+  </view>
+
+  <view class="title">{{article.Title}}</view>
+  <view class="content">{{article.Content}}</view>
+
+  <view class="gallery" wx:if="{{article.HeadImg}}">
+    <image src="{{article.HeadImg}}" mode="aspectFill" class="gallery-imagepp" data-src="{{article.HeadImg}}" bindtap="previewImage"></image>
+  </view>
+
+  <view class="action-bar">
+    <view class="like-area" bindtap="toggleLike">
+      <text class="like-icon {{isLiked ? 'liked' : ''}}">👍</text>
+      <text class="like-text {{isLiked ? 'liked' : ''}}">{{article.LikeCount || 0}}</text>
+    </view>
+    <view class="view-area">
+      <text class="view-text">浏览 {{article.ViewCount || 0}}</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <input placeholder="写下你的评论..." value="{{commentContent}}" bindinput="bindCommentInput" />
+    <button bindtap="submitComment">发布评论</button>
+  </view>
+
+  <view class="content">
+    <view wx:for="{{comments}}" wx:key="ID">
+      <view class="publish-time">用户 {{item.UserID}} · {{item.CreatedAt}}</view>
+      <view class="content">{{item.Content}}</view>
+      <button wx:if="{{userID && item.UserID === userID}}" data-id="{{item.ID}}" bindtap="deleteComment">删除</button>
+    </view>
+  </view>
+</view>

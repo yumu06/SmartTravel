@@ -1,0 +1,199 @@
+page {
+	background-color: #f1f1f1;
+}
+
+.level{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.cover{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cover image {
+	width: 100%;
+	height: 100%;
+}
+   
+.cover .layer {
+	width: 100%;
+	/* height: 120vw; */
+	/* margin-top: -120vw; */
+	z-index: 999;
+	/* opacity: 0.5; */
+}
+
+/*搜索*/
+.bg-box {
+	display: grid;
+	background-image: linear-gradient(to bottom, #9dc2de, #b2c8da
+	,#f1f1f1);
+	align-items: center;
+}
+
+.tip-box {
+    background-color: white;
+    margin: 20rpx;
+    border-radius: 5rpx;
+    border-radius: 5rpx;
+    font-size: 30rpx;
+    padding: 20rpx;
+}
+
+.tip-title {
+    padding: 0 15rpx;
+    width: 12%;
+    border-right: 1rpx solid #f1f1f1;
+}
+
+.tip-info {
+    padding: 0 15rpx;
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* 设置swiper组件的宽高 */
+swiper{
+  width: 100%;
+  height: 400rpx;
+}
+/* 设置swiper组件里面图片的宽高 */
+swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+swiper-item{
+	border-radius: 60rpx;
+}
+
+
+
+
+/* 二级菜单 */
+.tab-box {
+	margin: 3% 2%;
+	background-color: white;
+	border-radius: 20rpx;
+	height: 180rpx;
+}
+
+.tab-list {
+	padding: 20rpx,0;
+	flex: 1;
+	align-items: center;
+	text-align: center;
+	color: black;
+}
+
+.tab-img{
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.tab-text {
+	display: block;
+	font-size: 30rpx;
+	margin: 5rpx 0;
+}
+
+/*推荐卡片*/
+.rec-box{
+	margin: 20rpx;
+	display: grid;
+}
+
+.line{
+  width: 10rpx;
+  height: 34rpx;
+  border-radius: 50rpx;
+  background-color: #7dc5eb;
+}
+
+.title {
+	margin-left: 15rpx;
+	font-size: 35rpx;
+	font-weight: bold;
+}
+
+.article-list {
+	margin: 12rpx 0;
+	padding: 16rpx;
+	background-color: white;
+	border-radius: 10rpx;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+.row-left {
+	width: 70%;
+	line-height: 40rpx;
+	color: rgb(54, 54, 54);
+	padding: 12rpx 16rpx;
+}
+
+.row-left-title {
+	width: 100%;
+	margin: 10rpx 0;
+	font-size: 34rpx;
+	font-weight: bold;
+	line-height: 40rpx;
+	color: rgb(54, 54, 54);
+}
+
+.row-left-content {
+	margin: 8rpx 0;
+	font-size: 24rpx;
+	width: 100%;
+	line-height: 34rpx;
+	color: grey;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.row-right{
+	width: 40%;
+	align-items: center;
+}
+
+.row-img {
+	width: 220rpx;
+	height: 160rpx;
+	border-radius: 10rpx;
+}
+
+.btn{
+	border-radius: 50%;
+	width: 120rpx;
+	height: 120rpx;
+	background-color: rgb(225, 243, 248);
+	position: fixed;
+	top: 80%;
+	left: 75%;
+	align-items: center;
+}
+
+.btn-img{
+	height: 70rpx;
+	width: 70rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
